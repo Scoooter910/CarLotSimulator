@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CarLotSimulator
 {
-    public class CarLot
+    public class CarLot : Car
     {
         public static int NumberOfCars { get; private set; } = 0;
         public List<Car> Cars { get; private set; }
@@ -27,7 +27,7 @@ namespace CarLotSimulator
         {
             foreach (Car car in Cars)
             {
-                Console.WriteLine($"Year: {car.Year}, Make: {car.Make}, Model: {car.Model}");
+                Console.WriteLine($"Year: {car.Year}, Make: {car.Make}, Model: {car.Model} Engine sound: {car.EngineNoise} Horn sound: {car.HonkNoise}");
             }
         }
     }
